@@ -27,11 +27,15 @@ docker build -t my-nginx .
 docker volume create web_data
 
 # Run the Nginx container with the volume
+docker run -d --name my-nginx-container -v web_data:/usr/share/nginx/html -p 8080:80 my-nginx
+
+
 
 
 ```bash
+https://github.com/AditiPandey568/volume-creation.git
 
-docker run -d --name my-nginx-container -v web_data:/usr/share/nginx/html -p 8080:80 my-nginx
+
 
 
 
