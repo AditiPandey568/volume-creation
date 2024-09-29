@@ -20,9 +20,6 @@ echo "<h1>Hello, Docker!</h1>" > index.html
 # Create a Dockerfile
 touch Dockerfile
 
-# Add content to Dockerfile
-# (use your preferred text editor)
-
 # Build the Docker image
 docker build -t my-nginx .
 
@@ -30,6 +27,10 @@ docker build -t my-nginx .
 docker volume create web_data
 
 # Run the Nginx container with the volume
+
+
+```bash
+
 docker run -d --name my-nginx-container -v web_data:/usr/share/nginx/html -p 8080:80 my-nginx
 
 
